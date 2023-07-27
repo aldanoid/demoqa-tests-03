@@ -19,30 +19,30 @@ public class StudentRegistrationForm {
     void successTest() {
         open("/automation-practice-form");
 
-        $("#userName").setValue("Alex Egorov");
-        $("#userEmail").setValue("alex@egorov.com");
-        $("#currentAddress").setValue("Some address 1");
-        $("#permanentAddress").setValue("Another address 1");
-        $("#permanentAddress").setValue("Another address 1");
-        $("#permanentAddress").setValue("Another address 1");
-        $("#permanentAddress").setValue("Another address 1");
-        $("#permanentAddress").setValue("Another address 1");
-        $("#permanentAddress").setValue("Another address 1");
-        $("#permanentAddress").setValue("Another address 1");
-        $("#permanentAddress").setValue("Another address 1");
-        $("#permanentAddress").setValue("Another address 1");
+        $("#firstName").setValue("Ivan");
+        $("#lastName").setValue("Drago");
+        $("#userEmail").setValue("ivan@drago.com");
+        $("#genterWrapper").setValue("#gender-radio-1");
+        $("#userNumber").setValue("1113212155");
+        $("#dateOfBirthInput").setValue("01 Jan 2000");
+        $("#subjectsContainer").setValue("");
+        $("#hobbiesWrapper").setValue("#hobbies-checkbox-3");
+        $("#uploadPicture").setValue("");
+        $("#currentAddress").setValue("Rio 1135");
+        $("#state").setValue("Rajasthan");
+        $("#city").setValue("Jaipur");
         $("#submit").click();
 
-        $("#output #name").shouldHave(text("Alex Egorov"));
-        $("#output #email").shouldHave(text("alex@egorov.com"));
-        $("#output #currentAddress").shouldHave(text("Some address 1"));
-        $("#output #permanentAddress").shouldHave(text("Another address 1"));
-        $("#output #permanentAddress").shouldHave(text("Another address 1"));
-        $("#output #permanentAddress").shouldHave(text("Another address 1"));
-        $("#output #permanentAddress").shouldHave(text("Another address 1"));
-        $("#output #permanentAddress").shouldHave(text("Another address 1"));
-        $("#output #permanentAddress").shouldHave(text("Another address 1"));
-        $("#output #permanentAddress").shouldHave(text("Another address 1"));
-        $("#output #permanentAddress").shouldHave(text("Another address 1"));
+        $("#output #name").shouldHave(text(""));
+        $("#output #email").shouldHave(text(""));
+        $("#output #currentAddress").shouldHave(text(""));
+        $("#output #permanentAddress").shouldHave(text(""));
+        $("#output #permanentAddress").shouldHave(text(""));
+        $("#output #permanentAddress").shouldHave(text(""));
+        $("#output #permanentAddress").shouldHave(text(""));
+        $("#output #permanentAddress").shouldHave(text(""));
+        $("#output #permanentAddress").shouldHave(text(""));
+        $("#output #permanentAddress").shouldHave(text(""));
+        $("#output #permanentAddress").shouldHave(text(""));
     }
 }
