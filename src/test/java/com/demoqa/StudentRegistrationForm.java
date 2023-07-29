@@ -3,9 +3,9 @@ package com.demoqa;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class StudentRegistrationForm {
 
@@ -18,6 +18,8 @@ public class StudentRegistrationForm {
     @Test
     void successTest() {
         open("/automation-practice-form");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
 
         $("#firstName").setValue("Ivan");
         $("#lastName").setValue("Drago");
@@ -33,7 +35,7 @@ public class StudentRegistrationForm {
         $("#city").setValue("Jaipur");
         $("#submit").click();
 
-        $("#output #name").shouldHave(text(""));
+        $("[class=modal-dialog]").$( cssSelector:()).shouldHave(text("Ivan Drago"));
         $("#output #email").shouldHave(text(""));
         $("#output #currentAddress").shouldHave(text(""));
         $("#output #permanentAddress").shouldHave(text(""));
@@ -42,7 +44,7 @@ public class StudentRegistrationForm {
         $("#output #permanentAddress").shouldHave(text(""));
         $("#output #permanentAddress").shouldHave(text(""));
         $("#output #permanentAddress").shouldHave(text(""));
-        $("#output #permanentAddress").shouldHave(text(""));
-        $("#output #permanentAddress").shouldHave(text(""));
+        $("#output #stateCity-wrapper").shouldHave(text(""));
+
     }
 }
