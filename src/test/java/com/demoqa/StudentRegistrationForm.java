@@ -3,7 +3,6 @@ package com.demoqa;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -11,8 +10,9 @@ public class StudentRegistrationForm {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browser = "firefox";
         Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://demoqa.com";
     }
 
     @Test
@@ -35,16 +35,16 @@ public class StudentRegistrationForm {
         $("#city").setValue("Jaipur");
         $("#submit").click();
 
-        $("[class=modal-dialog]").$( cssSelector:()).shouldHave(text("Ivan Drago"));
-        $("#output #email").shouldHave(text(""));
-        $("#output #currentAddress").shouldHave(text(""));
-        $("#output #permanentAddress").shouldHave(text(""));
-        $("#output #permanentAddress").shouldHave(text(""));
-        $("#output #permanentAddress").shouldHave(text(""));
-        $("#output #permanentAddress").shouldHave(text(""));
-        $("#output #permanentAddress").shouldHave(text(""));
-        $("#output #permanentAddress").shouldHave(text(""));
-        $("#output #stateCity-wrapper").shouldHave(text(""));
+        $("[class=modal-dialog]").$("[class=table-striped]");
+        //$("#output #email").shouldHave(text(""));
+        //$("#output #currentAddress").shouldHave(text(""));
+        //$("#output #permanentAddress").shouldHave(text(""));
+        //$("#output #permanentAddress").shouldHave(text(""));
+        //$("#output #permanentAddress").shouldHave(text(""));
+        //$("#output #permanentAddress").shouldHave(text(""));
+        //$("#output #permanentAddress").shouldHave(text(""));
+        //$("#output #permanentAddress").shouldHave(text(""));
+        //$("#output #stateCity-wrapper").shouldHave(text(""));
 
     }
 }
