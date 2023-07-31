@@ -26,7 +26,7 @@ public class StudentRegistrationForm {
         $("#firstName").setValue("Ivan");
         $("#lastName").setValue("Drago");
         $("#userEmail").setValue("ivan@drago.com");
-        $("#genterWrapper").setValue("Male").pressEnter();
+        $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("1113212155");
 
         $("#dateOfBirthInput").click();
@@ -36,7 +36,7 @@ public class StudentRegistrationForm {
 
         $("#subjectsContainer").setValue("Physics").pressEnter();
 
-        $("#hobbiesWrapper#hobbies-checkbox-3").click();
+        $("#hobbiesWrapper").$(byText("Music")).click();
 
         $("#uploadPicture").setValue("");
         $("#uploadPicture").uploadFromClasspath("01.jpg");
@@ -45,9 +45,10 @@ public class StudentRegistrationForm {
         $("#state").setValue("Rajasthan");
         $("#city").setValue("Jaipur");
 
-        $("#stateCity-wrapper#state").setValue("Rajasthan").pressEnter();
-
-        $("#stateCity-wrapper#city").setValue("Jaipur").pressEnter();
+        $("#stateCity-wrapper").$(byText("Select State")).click();
+        $("#react-select-3-option-2").click();
+        $("#stateCity-wrapper").$(byText("Select City")).click();
+        $("#react-select-4-option-0").click();
 
         $("#submit").click();
 
