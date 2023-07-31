@@ -38,7 +38,6 @@ public class StudentRegistrationForm {
 
         $("#hobbiesWrapper").$(byText("Music")).click();
 
-        $("#uploadPicture").setValue("");
         $("#uploadPicture").uploadFromClasspath("01.jpg");
         $("#currentAddress").setValue("Rio 1135");
 
@@ -52,16 +51,16 @@ public class StudentRegistrationForm {
 
         $("#submit").click();
 
-        //$("[class=modal-dialog]").$("[class=table-striped]");
-        //$("#output #email").shouldHave(text(""));
-        //$("#output #currentAddress").shouldHave(text(""));
-        //$("#output #permanentAddress").shouldHave(text(""));
-        //$("#output #permanentAddress").shouldHave(text(""));
-        //$("#output #permanentAddress").shouldHave(text(""));
-        //$("#output #permanentAddress").shouldHave(text(""));
-        //$("#output #permanentAddress").shouldHave(text(""));
-        //$("#output #permanentAddress").shouldHave(text(""));
-        //$("#output #stateCity-wrapper").shouldHave(text(""));
+        $("tbody tr:nth-child(1) td:nth-child(2)").shouldHave(text("Ivan Drago"));
+        $("tbody tr:nth-child(2) td:nth-child(2)").shouldHave(text("ivan@drago.com"));
+        $("tbody tr:nth-child(3) td:nth-child(2)").shouldHave(text("Male"));
+        $("tbody tr:nth-child(4) td:nth-child(2)").shouldHave(text("1113212155"));
+        $("tbody tr:nth-child(5) td:nth-child(2)").shouldHave(text("01 April,1985"));
+        $("tbody tr:nth-child(6) td:nth-child(2)").shouldHave(text("Test"));
+        $("tbody tr:nth-child(7) td:nth-child(2)").shouldHave(text("Music"));
+        $("tbody tr:nth-child(8) td:nth-child(2)").shouldHave(text("01.jpg"));
+        $("tbody tr:nth-child(9) td:nth-child(2)").shouldHave(text("Rio 1135"));
+        $("tbody tr:nth-child(10) td:nth-child(2)").shouldHave(text("Rajasthan Jaipur"));
 
     }
 }
