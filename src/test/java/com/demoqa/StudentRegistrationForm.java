@@ -34,7 +34,7 @@ public class StudentRegistrationForm {
         $(".react-datepicker__year-select").selectOption("1985");
         $(".react-datepicker__day.react-datepicker__day--001").click();
 
-        $("#subjectsContainer").setValue("Physics").pressEnter();
+        $("#subjectsInput").setValue("Test").pressEnter();
 
         $("#hobbiesWrapper").$(byText("Music")).click();
 
