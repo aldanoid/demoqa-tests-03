@@ -37,13 +37,19 @@ public class StudentRegistrationForm {
         $("#hobbiesWrapper#hobbies-checkbox-3").click();
 
         $("#uploadPicture").setValue("");
-        $("#uploadPicture").uploadFile(new File("src/test/resources/photo.jpeg"));
+        $("#uploadPicture").uploadFromClasspath("01.jpg");
         $("#currentAddress").setValue("Rio 1135");
+
         $("#state").setValue("Rajasthan");
         $("#city").setValue("Jaipur");
+
+        $("#stateCity-wrapper#state").setValue("Rajasthan").pressEnter();
+
+        $("#stateCity-wrapper#city").setValue("Jaipur").pressEnter();
+
         $("#submit").click();
 
-        $("[class=modal-dialog]").$("[class=table-striped]");
+        //$("[class=modal-dialog]").$("[class=table-striped]");
         //$("#output #email").shouldHave(text(""));
         //$("#output #currentAddress").shouldHave(text(""));
         //$("#output #permanentAddress").shouldHave(text(""));
