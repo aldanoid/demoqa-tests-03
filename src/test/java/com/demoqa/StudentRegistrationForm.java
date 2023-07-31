@@ -4,6 +4,8 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -13,7 +15,7 @@ public class StudentRegistrationForm {
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = "firefox";
-        Configuration.browserSize = "1920x1080";
+        //Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
     }
 
@@ -38,7 +40,7 @@ public class StudentRegistrationForm {
 
         $("#hobbiesWrapper").$(byText("Music")).click();
 
-        $("#uploadPicture").uploadFromClasspath("01.jpg");
+        $("#uploadPicture").uploadFile(new File("src/test/resources/img/01.jpg"));
         $("#currentAddress").setValue("Rio 1135");
 
         $("#state").setValue("Rajasthan");
